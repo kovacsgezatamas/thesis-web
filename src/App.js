@@ -1,10 +1,14 @@
 import React from 'react';
-import { Provider } from 'react-redux';
+// import { Provider } from 'react-redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
+import Nav, { NavItem } from '@thesis-ui/nav';
+
 import './l10n';
 import * as Styled from './App.styled';
+
+import Home from './containers/Home';
 
 function App() {
   const { t } = useTranslation();
@@ -13,7 +17,19 @@ function App() {
     <BrowserRouter>
       <Styled.Container>
         <Styled.NavBar>
-          Navbar
+          <Nav>
+            <NavItem>
+              {t('REGISTER')}
+            </NavItem>
+
+            <NavItem>
+              {t('LOGIN')}
+            </NavItem>
+
+            <NavItem isSelected>
+              {t('HOME')}
+            </NavItem>
+          </Nav>
         </Styled.NavBar>
 
         <Styled.Content>
@@ -26,16 +42,8 @@ function App() {
               Login
             </Route>
 
-            <Route key="recover-password" exact path="/recover-password">
-              Pecover Password
-            </Route>
-
-            <Route key="unauthorized" exact path="/unauthorized">
-              Unauthorized
-            </Route>
-
             <Route key="home" path="/">
-              Home
+              <Home />
             </Route>
           </Switch>
         </Styled.Content>

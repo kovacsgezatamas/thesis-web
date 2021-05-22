@@ -11,9 +11,7 @@ const Container = styled(Flex).attrs(() => ({
 
 const NavBar = styled(Box).attrs(() => ({
   'data-test-id': 'APP_NAV_BAR',
-}))`
-  width: 150px;
-`;
+}))``;
 
 const Content = styled(Flex).attrs(() => ({
   'data-test-id': 'APP_CONTENT',
