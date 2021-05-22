@@ -202,7 +202,6 @@ function Home() {
         window.alert(t('VIN_ALREADY_EXISTS'));
       }
       // TODO error handling with toaster
-      // check the response.errorCode - if EXISTING_VIN
     }
   }
 
