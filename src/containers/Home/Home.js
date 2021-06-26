@@ -70,7 +70,7 @@ function Home() {
       setSubscriptions(subscriptionData);
 
     } catch (e) {
-      // TODO error handling with toaster
+      window.alert(t('NO_SUBSCRIPTIONS_TO_SHOW'))
     }
 
     setIsLoading(false);
